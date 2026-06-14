@@ -1,0 +1,16 @@
+name: multi-operating systems
+on:
+  workflow_dispatch:
+jobs:
+  linuxjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run on Ubuntu Linux
+        run: |
+          hostnamectl
+  windowsjob:
+    runs-on: windows-latest
+    steps:
+      - name: Run on Windows
+        run: |
+          dir
