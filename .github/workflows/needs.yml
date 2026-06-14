@@ -1,0 +1,20 @@
+---
+name: need context testing
+on:
+  - push
+  - workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running command
+        run: |
+          date
+          sleep 30
+  job2:
+    need: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: running other command
+        run: date
+
