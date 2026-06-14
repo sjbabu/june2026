@@ -1,0 +1,19 @@
+name: workflow-1
+on: [push, workflow_dispatch]
+jobs:   
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: step 1
+          run: echo "Hello World form SJ"
+        - name: step 2
+          run: df -hT
+        - name: step 3
+        - run: |
+            pwd
+            date
+            hostnamectl
+            ls -la
+            whoami
+
+    
