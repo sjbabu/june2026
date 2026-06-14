@@ -1,0 +1,11 @@
+name: mutiplejopbs using matrix
+on: workflow_dispatch
+jobs:
+  Dev:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - name: Display OS
+        run: echo "runnin on ${{ matrix.os }}"
