@@ -1,0 +1,10 @@
+name: WF-99
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step 1
+      run: |
+        pwd
+        df -hT
